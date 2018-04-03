@@ -2,8 +2,8 @@ FROM node:9
 
 ENV HOME /app
 ENV BITGO_ENV prod
-ENV k ./k.key
-ENV c ./c.crt
+ENV k="./k.key"
+ENV c="./c.crt"
 RUN apt-get update && apt-get -y upgrade
 RUN apt-get -y install build-essential
 
