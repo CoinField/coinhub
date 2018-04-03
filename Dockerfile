@@ -2,7 +2,8 @@ FROM node:9
 
 ENV HOME /app
 ENV BITGO_ENV prod
-
+ENV k ./k.key
+ENV c ./c.crt
 RUN apt-get update && apt-get -y upgrade
 RUN apt-get -y install build-essential
 
@@ -20,4 +21,4 @@ USER node
 
 EXPOSE 3080
 
-CMD ["sh", "-c", "./bin/coinhub -b=0.0.0.0 -e=$BITGO_ENV -k=./k.key -c=./c.crt"]
+CMD ["sh", "-c", "./bin/coinhub -b=0.0.0.0 -e=$BITGO_ENV -k=$k -c=$c"]
