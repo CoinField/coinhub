@@ -20,4 +20,4 @@ USER node
 
 EXPOSE 3080
 
-CMD ["sh", "-c", "./bin/coinhub -b=0.0.0.0 -e=$BITGO_ENV" -k='./k.key' -c='./c.crt']
+CMD ["sh", "-c", "./bin/coinhub -b=0.0.0.0 -e=$BITGO_ENV -k=./k.key -c=./c.crt"]
