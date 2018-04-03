@@ -19,5 +19,3 @@ COPY . .
 USER node
 
 EXPOSE 3080
-CMD ["echo", "$k"]
-CMD ["sh", "-c", "./bin/coinhub -b=0.0.0.0 -e=$BITGO_ENV -k=$k -c=$c"]
