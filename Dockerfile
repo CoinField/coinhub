@@ -2,10 +2,10 @@ FROM node:9
 
 ENV HOME /app
 ENV BITGO_ENV prod
-RUN apt-get update && apt-get -y upgrade
-RUN apt-get -y install build-essential
 ENV KEY /app/k.key
 ENV CRT /app/c.crt
+RUN apt-get update && apt-get -y upgrade
+RUN apt-get -y install build-essential
 RUN mkdir ${HOME}
 
 WORKDIR ${HOME}
