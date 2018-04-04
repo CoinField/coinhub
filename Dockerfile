@@ -20,4 +20,4 @@ USER node
 
 EXPOSE 3080
 
-CMD ["sh", "-c", "./bin/coinhub -b=127.0.0.1 -e=$BITGO_ENV --disablessl"]
+CMD ["sh", "-c", "./bin/coinhub --bind 0.0.0.0 --env prod --disablessl --debug"]
