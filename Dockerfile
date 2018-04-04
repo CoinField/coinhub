@@ -1,7 +1,7 @@
 FROM node:9
 
 ENV HOME /app
-ENV BITGO_ENV test
+ENV BITGO_ENV prod
 
 RUN apt-get update && apt-get -y upgrade
 RUN apt-get -y install build-essential
